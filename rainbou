@@ -1,0 +1,44 @@
+#!/bin/sh
+# Rainbou - color scheme builder
+# Uses user-defined color schemes and templates to build color scheme for some programs
+#
+# (c) tudurom 2016 - ISC
+#
+
+usage() { cat << EOF
+Usage: rainbou <color scheme file> <template>
+
+EOF
+
+exit 1
+}
+
+main() {
+  scheme_file="$1"
+  template_file="$2"
+  # If the files are invalid, print the usage and exit
+  (test $# -lt 2 || !(test -f "$scheme_file" && test -f "$template_file")) && usage
+
+  output_file="$(basename $scheme_file)_$(basename $template_file)"
+
+  # Create color scheme file
+  cp "$template_file" "$output_file"
+
+  # This script is so flexible it supports any color sequences that start in '$COLOR' and end in '$'
+  grep '\$COLOR_[0-9a-zA-Z]*\$' "$scheme_file" | while read -r line; do
+    raw_color="$(echo "$line" | cut -d' ' -f1)"
+    color_value="$(echo "$line" | cut -d' ' -f2)"
+    # Put the color
+    if grep -F "$raw_color" "$template_file" &> /dev/null; then
+      escaped_color="$(echo ${raw_color} | sed -s 's/\$/\\\$/g')"
+      new=$(cat "$output_file" | sed "s/${escaped_color}/${color_value}/g")
+      rm "$output_file"
+      echo "$new" > "$output_file"
+      #cat "$output_file"
+    fi
+  done
+
+  exit 0
+}
+
+main $@

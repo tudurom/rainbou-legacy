@@ -1,0 +1,43 @@
+static const char *colorname[] = {
+  /* 8 normal colors */
+  "$COLOR_0$",
+  "$COLOR_1$",
+  "$COLOR_2$",
+  "$COLOR_3$",
+  "$COLOR_4$",
+  "$COLOR_5$",
+  "$COLOR_6$",
+  "$COLOR_7$",
+  "$COLOR_8$",
+
+  /* 8 brightcolors */
+  "$COLOR_9$",
+  "$COLOR_10$",
+  "$COLOR_11$",
+  "$COLOR_12$",
+  "$COLOR_13$",
+  "$COLOR_14$",
+  "$COLOR_15$",
+  "$COLOR_16$",
+
+  [255] = 0,
+
+  /* background and foreground colors */
+  [256] = "$COLOR_BG$",
+  [257] = "$COLOR_FG$"
+};
+
+/* Default colors for foreground, background and cursor */
+static unsigned int defaultfg = 7;
+static unsigned int defaultbg = 0;
+static unsigned int defaultcs = 7;
+
+/*
+ * Colors used, when the specific fg == defaultfg. So in reverse mode this
+ * will reverse too. Another logic would only make the simple feature too
+ * complex.
+ */
+static unsigned int defaultitalic = 11;
+static unsigned int defaultunderline = 7;
+
+// vim: set ft=c :

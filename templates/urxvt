@@ -1,0 +1,38 @@
+! special
+*.foreground:   $COLOR_FG$
+*.background:   $COLOR_BG$
+*.cursorColor:  $COLOR_CR$
+
+! black
+*.color0:       $COLOR_0$
+*.color8:       $COLOR_8$
+
+! red
+*.color1:       $COLOR_1$
+*.color9:       $COLOR_9$
+
+! green
+*.color2:       $COLOR_2$
+*.color10:      $COLOR_10$
+
+! yellow
+*.color3:       $COLOR_3$
+*.color11:      $COLOR_11$
+
+! blue
+*.color4:       $COLOR_4$
+*.color12:      $COLOR_12$
+
+! orange
+*.color5:       $COLOR_5$
+*.color13:      $COLOR_13$
+
+! cyan
+*.color6:       $COLOR_6$
+*.color14:      $COLOR_14$
+
+! white
+*.color7:       $COLOR_7$
+*.color15:      $COLOR_15$
+
+! vim: set ft=xdefaults :
