@@ -14,7 +14,7 @@ Rainbou takes two files: a color file and a template file. The color file contai
 $COLOR_0$ #000000
 $COLOR_1$ #111111
 ...
-$COLOR_15$ $ffffff
+$COLOR_15$ #ffffff
 ```
 
 #### Template file
