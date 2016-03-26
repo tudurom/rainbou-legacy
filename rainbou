@@ -25,7 +25,8 @@ main() {
   cp "$template_file" "$output_file"
 
   # This script is so flexible it supports any color sequences that start in '$COLOR' and end in '$'
-  grep '\$COLOR_[0-9a-zA-Z]*\$' "$scheme_file" | while read -r line; do
+  grep '\$COLOR_[0-9a-zA-Z]*\$' "$scheme_file" | \
+  while read -r line; do
     raw_color="$(echo "$line" | cut -d' ' -f1)"
     color_value="$(echo "$line" | cut -d' ' -f2)"
     # Put the color
