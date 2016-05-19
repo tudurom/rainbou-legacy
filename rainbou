@@ -31,7 +31,7 @@ main() {
     color_value="$(echo "$line" | cut -d' ' -f2)"
     # Put the color
     if grep -F "$raw_color" "$template_file" &> /dev/null; then
-      escaped_color="$(echo ${raw_color} | sed -s 's/\$/\\\$/g')"
+      escaped_color="$(echo ${raw_color} | sed 's/\$/\\\$/g')"
       new=$(cat "$output_file" | sed "s/${escaped_color}/${color_value}/g")
       rm "$output_file"
       echo "$new" > "$output_file"
