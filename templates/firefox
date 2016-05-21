@@ -326,4 +326,4 @@ tabbrowser tabpanels, #appcontent > #content { background: var(--bg-light) !impo
 }
 /**/
 
-/* vim: set ft=css :
+/* vim: set ft=css : */
