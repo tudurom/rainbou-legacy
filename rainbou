@@ -35,9 +35,14 @@ main() {
       new=$(cat "$output_file" | sed "s/${escaped_color}/${color_value}/g")
       rm "$output_file"
       echo "$new" > "$output_file"
-      #cat "$output_file"
     fi
   done
+
+  #remove '#' in output if using a tty template
+  if [ "$template_file" = "templates/linux_tty" ]; then
+    fix=$(cat "$output_file" | sed "/[0-9a-zA-Z]\"$/ s/\#//")
+    echo "$fix" > "$output_file"
+  fi
 
   exit 0
 }

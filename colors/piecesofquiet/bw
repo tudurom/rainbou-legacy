@@ -1,0 +1,27 @@
+$COLOR_FG$ #ffffff 
+$COLOR_BG$ #000000
+$COLOR_CR$ #ffffff
+
+$COLOR_0$ #aaaaaa
+$COLOR_8$ #aaaaaa
+
+$COLOR_1$ #eeeeee
+$COLOR_9$ #eeeeee
+
+$COLOR_2$ #dddddd
+$COLOR_10$ #dddddd
+
+$COLOR_3$ #333333
+$COLOR_11$ #333333
+
+$COLOR_4$ #666666
+$COLOR_12$ #666666
+
+$COLOR_5$ #bbbbbb
+$COLOR_13$ #bbbbbb
+
+$COLOR_6$ #222222
+$COLOR_14$ #222222
+
+$COLOR_7$ #444444
+$COLOR_15$ #444444
