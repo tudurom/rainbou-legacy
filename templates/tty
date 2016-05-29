@@ -1,3 +1,5 @@
+# throw this in your ~/.(whatever)rc
+
 if [ "$TERM" = "linux" ]; then
 	echo -en "\e]P0$COLOR_0$"
 	echo -en "\e]P1$COLOR_1$"
