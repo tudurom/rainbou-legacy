@@ -1,0 +1,21 @@
+# throw this in your ~/.(whatever)rc
+
+if [ "$TERM" = "linux" ]; then
+echo -en "\e]P0$COLOR_0$"
+echo -en "\e]P1$COLOR_1$"
+echo -en "\e]P2$COLOR_2$"
+echo -en "\e]P3$COLOR_3$"
+echo -en "\e]P4$COLOR_4$"
+echo -en "\e]P5$COLOR_5$"
+echo -en "\e]P6$COLOR_6$"
+echo -en "\e]P7$COLOR_7$"
+echo -en "\e]P8$COLOR_8$"
+echo -en "\e]P9$COLOR_9$"
+echo -en "\e]PA$COLOR_10$"
+echo -en "\e]PB$COLOR_11$"
+echo -en "\e]PC$COLOR_12$"
+echo -en "\e]PD$COLOR_13$"
+echo -en "\e]PE$COLOR_14$"
+echo -en "\e]PF$COLOR_15$"
+clear
+fi
