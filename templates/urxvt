@@ -23,7 +23,7 @@
 *.color4:       $COLOR_4$
 *.color12:      $COLOR_12$
 
-! orange
+! magenta (or orange)
 *.color5:       $COLOR_5$
 *.color13:      $COLOR_13$
 
