@@ -6,6 +6,8 @@ Simple color scheme file generator
 
 Rainbou takes two files: a color file and a template file. The color file contains color definitions, while the template file contains details about where to put the colors.
 
+Add your custom styles to `templates/custom`. The directory is ignored by git.
+
 ### Example:
 
 #### Color file

@@ -1,1 +1,3 @@
 *_*
+templates/custom/*
+!templates/custom/README.md
